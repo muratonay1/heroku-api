@@ -1,0 +1,16 @@
+{
+  "name": "muratstack",
+  "version": "1.0.0",
+  "description": "muratstack api v1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "imuratony@gmail.com",
+  "type": "module",
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.8.1"
+  }
+}
