@@ -1,2 +1,1 @@
-web: npm install express
-web: node index.js
+web: node ./test.js
