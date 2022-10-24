@@ -3,8 +3,8 @@ import express from 'express';
 const app = express();
 app.use(express.json());
 
-app.get("/",(req,res)=>{
-    res.send("hello");
+app.get("/users",(req,res)=>{
+    res.send({"name":"murat","job":"engineer"});
 })
 
 app.listen(process.env.PORT || 5000, () => {
