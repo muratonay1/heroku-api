@@ -1,12 +1,13 @@
 import express from 'express';
-
+import getData from './methods.js';
 const app = express();
 app.use(express.json());
 
 app.get("/users",(req,res)=>{
-    res.send({"name":"murat","job":"engineer"});
+    getData((pool)=>{
+        res.send(pool);
+    })
 })
-
 app.listen(process.env.PORT || 5000, () => {
     console.log("server");
 })
