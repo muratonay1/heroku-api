@@ -11,7 +11,8 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "express": "*",
     "firebase": "^9.8.1",
-    "express":"*"
+    "firebase-admin": "^11.0.0"
   }
 }
