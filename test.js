@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/users",(req,res)=>{
-    res.send({"name":"murat","job":"engineer"});
+    res.send({"name":"murat","job":"engineer1"});
 })
 
 app.listen(process.env.PORT || 5000, () => {
