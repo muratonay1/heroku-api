@@ -2,9 +2,9 @@
   "name": "muratstack",
   "version": "1.0.0",
   "description": "muratstack api v1.0.0",
-  "main": "test.js",
+  "main": "api.js",
   "scripts": {
-    "start": "node test.js"
+    "start": "node api.js"
   },
   "author": "imuratony@gmail.com",
   "type": "module",

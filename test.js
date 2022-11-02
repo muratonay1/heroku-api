@@ -12,5 +12,8 @@ pocket.put("insertDate",PocketUtility.GetRealDate());
 cron.schedule('* * * * *', () => {
     db.put("users",PocketUtility.GenerateOID(),pocket,(response)=>{
         console.log("batch triggered and works successfully.");
+        db.getAll("users",(responseAll)=>{
+            console.log("AlData: ",responseAll);
+        })
     });
 });
