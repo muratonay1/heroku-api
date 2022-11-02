@@ -1,13 +1,15 @@
-import express from 'express';
-import getData from './methods.js';
-const app = express();
-app.use(express.json());
+import Pocket from './pocket-core/Pocket.js';
+import  PocketFirestore  from "./pocket-core/PocketFirestore.js";
+import PocketUtility from './pocket-core/PocketUtility';
+import cron from 'node-cron';
 
-app.get("/users",(req,res)=>{
-    getData((pool)=>{
-        res.send(pool);
-    })
-})
-app.listen(process.env.PORT || 5000, () => {
-    console.log("server");
-})
+var pocket = new Pocket();
+var db = new PocketFirestore();
+pocket.put("isim","şenol");
+pocket.put("soyisim","onay");
+
+
+cron.schedule('* * * * *', () => {
+    db.put("users",PocketUtility.GenerateOID(),pocket);
+    console.log('added successfully');
+});

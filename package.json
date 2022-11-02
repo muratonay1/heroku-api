@@ -2,7 +2,7 @@
   "name": "muratstack",
   "version": "1.0.0",
   "description": "muratstack api v1.0.0",
-  "main": "index.js",
+  "main": "api.js",
   "scripts": {
     "start": "node test.js"
   },
@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "*",
     "firebase": "^9.8.1",
-    "firebase-admin": "^11.0.0"
+    "firebase-admin": "^11.0.0",
+    "node-cron": "^3.0.2"
   }
 }
