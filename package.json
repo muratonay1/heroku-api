@@ -2,7 +2,7 @@
   "name": "muratstack",
   "version": "1.0.0",
   "description": "muratstack api v1.0.0",
-  "main": "api.js",
+  "main": "test.js",
   "scripts": {
     "start": "node test.js"
   },

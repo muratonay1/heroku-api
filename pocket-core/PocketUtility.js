@@ -1,5 +1,5 @@
-var {Pocket} = require('./Pocket');
-var {PocketList} = require('./PocketList');
+import Pocket from './Pocket.js';
+import PocketList from './PocketList.js';
 /**
  *
  * @author İsmet Murat Onay

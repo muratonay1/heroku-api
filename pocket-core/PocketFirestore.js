@@ -1,6 +1,6 @@
 import { initializeApp, applicationDefault, cert } from 'firebase-admin/app';
 import { getFirestore, Timestamp, FieldValue } from 'firebase-admin/firestore';
-const { default: serviceAccountKey } = await import("./serviceAccountKey.json", {
+const { default: serviceAccountKey } = await import("../serviceAccountKey.json", {
     assert: {
       type: "json",
     },
@@ -61,14 +61,13 @@ export default class PocketFirestore {
 	 * @param {String} collection
 	 * @param {any} data
 	 * @param {any} key
-	 * @param {callback} callback
 	 */
 	put(database, collection, data, callback) {
 		async function call() {
 			const response = await firestore
 				.collection(database)
 				.doc(collection)
-				.set(data);
+				.set(JSON.parse(JSON.stringify(data)));
 			callback(response);
 		}
 		call();
